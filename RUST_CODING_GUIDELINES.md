@@ -16,6 +16,17 @@
   * Prefer formatter/linter defaults
   * Prefer existing community guidance, like the [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/about.html)
 
+## Code Review
+
+Along with automated tooling, guidelines are primarily enforced in code review. "Improve code quality" is an obvious goal of code review, but it is also important to consider "reducing developer cognitive load", which applies to both authors _and_ reviewers:
+
+* Authors should be clear if a PR is _not_ ready for close review against these guidelines. "Draft" PRs are a good signal for this.
+* If a code review comment is _about_ the code itself and does not address the correctness, performance, or some other articulable aspect of "code quality", it should not block approval of a PR.
+  * PR revisions are _cheap_, but not _free_; authors should exercise judgement in addressing non-blocking feedback.
+  * Reviewers should be clear if feedback is based on aesthetics / personal preference: "I prefer...", "I like...", "non-blocking: ...". _Try to be equanimous about these comments being ignored._
+* If you find yourself posting the same type of comment repeatedly, consider proposing a change to these guidelines _or_ reevaluating its importance.
+  * Consider whether this type of feedback could be usefully automated.
+
 ## Guidelines
 
 ### Automated formatting / linting
@@ -44,11 +55,3 @@ _TODO_
 > * When to (not) use `impl Into/AsRef`
 
 
-# Code Review
-
-* If a code review comment is _about_ the code itself and does not address the correctness, performance, or some other articulable aspect of "code quality" it should not block a PR.
-  * PR revisions are cheap, but not free.
-  * Be clear if a review comment is aesthetic / personal preference: "I prefer...", "I like...", "non-blocking: ...". _Try to be equanimous about these comments being ignored._
-* If you find yourself posting the same type of comment repeatedly, consider proposing a change to these guidelines _or_ reevaluating its importance.
-  * "Reduce developer cognitive load" applies to authors _and_ reviewers.
-  * Consider whether your feedback could be usefully automated.
